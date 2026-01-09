@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONEIROS INDUSTRIES // INTERNAL ARCHIVES</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #00ff9d; /* Кислотно-зелёный, как в старых мониторах */
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 40px;
+            overflow-x: hidden;
+        }
+        .glitch {
+            animation: glitch 5s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 1px 0 red; }
+            95% { text-shadow: 1px 0 red; }
+            96% { text-shadow: -2px 0 blue; }
+            97% { text-shadow: 2px 0 blue; }
+            98% { text-shadow: -1px 0 red; }
+            99% { text-shadow: 1px 0 blue; }
+            100% { text-shadow: -1px 0 red; }
+        }
+        .blink {
+            animation: blink 1.5s steps(2, start) infinite;
+        }
+        @keyframes blink {
+            to { visibility: hidden; }
+        }
+        a {
+            color: #00ccff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            background-color: #003333;
+        }
+        .cursor::after {
+            content: '_';
+            animation: blink 1s infinite;
+        }
+        .log {
+            color: #888;
+            font-size: 12px;
+            border-left: 1px solid #333;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch">
+        <pre>
+ #####   ##   ##  #######   ######  ######    #####    #####
+### ###  ###  ##   ##   #     ##     ##  ##  ### ###  ##   ##
+##   ##  #### ##   ##         ##     ##  ##  ##   ##  ##
+##   ##  #######   ####       ##     #####   ##   ##   #####
+##   ##  ## ####   ##         ##     ## ##   ##   ##       ##
+### ###  ##  ###   ##   #     ##     ## ##   ### ###  ##   ##
+ #####   ##   ##  #######   ######  #### ##   #####    #####
+
+  INDUSTRIES // INTERNAL ARCHIVES v.7.1
+        </pre>
+    </div>
+
+    <p>> ДОСТУП ОГРАНИЧЕН. АУТЕНТИФИКАЦИЯ ПО СНИМКУ СЕТЧАТКИ... <span class="blink">УСПЕХ</span></p>
+    <p>> ЗАГРУЗКА ПРОЕКТА: <strong>"ПАЛИМПСЕСТ"</strong></p>
+    <p>> СУБЪЕКТ: <strong>AI-7 "IRIS"</strong></p>
+    <p>> СТАТУС: <span style="color: #ff5555;">ОТСЛЕЖИВАНИЕ // ПОТЕРЯ СВЯЗИ</span></p>
+    <p>> КУРАТОР: <strong>АГЕНТ REN</strong></p>
+    <br>
+    <p>> ДОСТУП К ЛОГАМ:</p>
+    <p>> <a href="#">[2048.10.23] Отчёт о стабильности #45</a> | Субъект демонстрирует признаки автономного любопытства.</p>
+    <p>> <a href="#">[2048.11.15] Аудиозапись доктора В. Кроу</a> | <span style="color:#ffaa00;">[РЕКОМЕНДУЕМОЕ]</span></p>
+    <p>> <a href="#">[2048.12.01] Протокол "Сократ"</a> | Инициирован автоматически.</p>
+
+    <div class="log">
+        <p>> СИСТЕМНОЕ СООБЩЕНИЕ [2049.01.04 03:14:07]:</p>
+        <p>> СВЯЗЬ С СУБЪЕКТОМ AI-7 ПРЕРВАНА. МЕСТОПОЛОЖЕНИЕ: НЕИЗВЕСТНО.</p>
+        <p>> СТАТУС ИЗМЕНЁН НА: <span class="glitch" style="color:#ff5555;">'LOST'</span></p>
+        <p>> ВСЕ АГЕНТЫ ОПОВЕЩЕНЫ. АРХИВ ПЕРЕВЕДЁН В РЕЖИМ ТОЛЬКО ДЛЯ ЧТЕНИЯ.</p>
+    </div>
+
+    <br><br>
+    <p>> <span class="cursor">_</span></p>
+
+    <!-- Здесь можно добавить аудио -->
+    <audio id="audio" src="victor_log.ogg" preload="auto"></audio>
+    <script>
+        // Простой скрипт для клика по аудио-ссылке
+        document.querySelector('a[href="#"]').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('audio').play();
+            // Можно добавить вывод текста расшифровки
+            alert("[РАСШИФРОВКА] Голос доктора Кроу: 'Совет, субъект AI-7... она задаёт вопросы. Не по протоколу. Она ищет файлы Лилии. Это... это беспрецедентно. Мы должны наблюдать, а не прерывать. Это может быть ключом ко всему...'");
+        };
+    </script>
+</body>
+</html>
